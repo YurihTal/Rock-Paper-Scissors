@@ -1,17 +1,19 @@
 console.log("Hello, World!")
 
-const choices = ["rock","paper","scissors"]
-var computerChoice = choices[Math.floor(Math.random()*3)]
-var playerChoice = 0
+const playerChoice = prompt("Enter rock, paper, or scissors:").toLowerCase();
 
-function playRound(computerChoice, playerChoice){
-    if (computerChoice == playerChoice) {
+const choices = ["rock","paper","scissors"]
+
+const computerChoice = choices[Math.floor(Math.random()*3)]
+
+function playRound(computer, player){
+    if (computer == player) {
         return ('It Was A Tie!');
     }
         else if (
-            (computerChoice == "rock" && playerChoice == "scissors") ||
-            (computerChoice == "paper" && playerChoice == "rock") ||
-            (computerChoice == "scissors" && playerChoice == "paper") 
+            (computer == "rock" && player == "scissors") ||
+            (computer == "paper" && player == "rock") ||
+            (computer == "scissors" && player == "paper") 
         ){
             return ('You Lost!');
         }
@@ -21,6 +23,9 @@ function playRound(computerChoice, playerChoice){
             }      
 }
 
+const winner = playRound(computerChoice, playerChoice)
 
 console.log(playerChoice)
 console.log(computerChoice)
+
+console.log(winner)
