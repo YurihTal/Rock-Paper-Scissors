@@ -10,8 +10,8 @@ function playRound(computerChoice, playerChoice){
     }
         else if (
             (computerChoice == "rock" && playerChoice == "scissors") ||
-            (computerChoice == "paper" && playerChoice == "rock")
-            (computerChoice == "scissors" && playerChoice == "paper")
+            (computerChoice == "paper" && playerChoice == "rock") ||
+            (computerChoice == "scissors" && playerChoice == "paper") 
         ){
             return ('You Lost!');
         }
@@ -20,6 +20,7 @@ function playRound(computerChoice, playerChoice){
             
             }      
 }
+
 
 console.log(playerChoice)
 console.log(computerChoice)
